@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-app = Flask(__name__), render_template
+app = Flask(__name__)
 
 @app.route("/about")
 def about():
@@ -17,6 +17,11 @@ def profile():
     return render_template("person.html", d = dict, l = list)
 
 @app.route("/")
+def home():
+    page="""
+    <h1>Home Page</h1>
+    """
+    return page
 
 
 if __name__ == "__main__":
