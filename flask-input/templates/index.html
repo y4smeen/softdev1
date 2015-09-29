@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+
+<h1>Hello World</h1>
+
+<hr>
+{% for a in args %}
+<h3>{{a}} : {{args[a]}}</h3>
+{{% endfor %}}
+<hr>
+outform: <input type="text" name="outform">
+<input type="submit" name="button" value="out">
+<hr>
+<form>
+  name: <input type="text" name="name">
+  age: <input type="text" name="age">
+  <input type="submit" name="button" value="up">
+  <input type="submit" name="button" value="down">
+
+</form>
