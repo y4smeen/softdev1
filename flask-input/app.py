@@ -3,7 +3,8 @@ import utils
 
 app = Flask(__name__)
 
-@app.route("/login", methods=["GET", "POST"])
+
+@app.route("/login",methods=["GET","POST"])
 def login():
     if request.method=="GET":
         return render_template("login.html")
@@ -17,15 +18,15 @@ def login():
             return "<h1>Logged in</h1>"
         else:
             error = "Bad username or password"
-            return render_template("login.html")
-
+            return render_template("login.html",err=error)
 
 @app.route("/")
 def index():
-  print request.args
-  print request.args.get("size")
-  return render_template("index.html", args=request.args)
+    print request.args
+    print request.args.get("size")
+    return render_template("index.html",args=request.args)
+
 
 if __name__ == "__main__":
-    app.debug = True
-    app.run(host="0.0.0.0", port=8000)
+   app.debug = True
+   app.run(host="0.0.0.0", port=8000)
