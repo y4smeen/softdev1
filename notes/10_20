@@ -2,3 +2,15 @@ NoSQL
 - everything that's not SQL
 - schemaless
 - low cost of entry
+
+MongoDB
+- server
+- database
+- collection
+- document
+
+SQL
+- server
+- database
+- tables
+- record
