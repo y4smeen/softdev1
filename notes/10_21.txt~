@@ -1,0 +1,3 @@
+db.people.insert(x)
+db.people.insert({name:'Sue', age:40})
+db.find()
