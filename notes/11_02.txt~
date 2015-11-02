@@ -4,6 +4,4 @@
 - API
 - python --> web socket: end to end connection that acts like a file (reading & writing)
 - curl [url] --> opens web socket
-- screen scraping, python --> will break eventually when the website changes :(
-
 
