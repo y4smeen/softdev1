@@ -6,4 +6,8 @@
 - curl [url] --> opens web socket
 - screen scraping, python --> will break eventually when the website changes :(
 
+Some websites
+- weather.com
+- open weather maps
 
+- JSON (just like MongoDB)
