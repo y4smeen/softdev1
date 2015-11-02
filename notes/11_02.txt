@@ -1,4 +1,7 @@
 - object mapper
 - static data
 - data that changes
-- 
+- API
+- python --> web socket: end to end connection that acts like a file (reading & writing)
+- curl [url] --> opens web socket
+
