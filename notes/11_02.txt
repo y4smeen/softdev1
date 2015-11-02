@@ -1,0 +1,4 @@
+- object mapper
+- static data
+- data that changes
+- 
