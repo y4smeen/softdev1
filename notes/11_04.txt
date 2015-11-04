@@ -1,0 +1,11 @@
+GIL = Global Interpreter Lock
+- threads
+- processes
+
+Deployment Options
+- Apache
+- WSGI Containers
+  - Tornado
+  - Green Unicorn ('Gunicorn')
+  
+  
