@@ -1,0 +1,6 @@
+1. Query (who, where, when)
+2. Get a bazillion web pages w/ the query words
+3. Extract text
+4. Analyze text
+  - Regular expression
+  
