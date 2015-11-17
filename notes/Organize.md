@@ -1,38 +1,38 @@
--students
--teachers
--transcripts
--attendance
--schedule
+- students
+- teachers
+- transcripts
+- attendance
+- schedule
 
 Solutions:
--linked list type structure
+- linked list type structure
 
 
 file = sequence of bytes
 
-Relational Databases
+## Relational Databases
 Student
-  -Student ID
-  -Student Name
-  -Teacher ID
-  -Teacher Name
-  -Course IDr
-  -Course Name
-  -Transcript
-    -Student ID
-    -Teacher ID
-    -CourseID
-    -Term
-    -Grade
+  - Student ID
+  - Student Name
+  - Teacher ID
+  - Teacher Name
+  - Course IDr
+  - Course Name
+  - Transcript
+    - Student ID
+    - Teacher ID
+    - CourseID
+    - Term
+    - Grade
 
-Q(Students,name=Yasmeen)
-Q(Trans,SID=1,Term=2015)
-  -CID1
-  -CID2
-  -CID3
-Q(Teachers,Name=Z)
+* Q(Students,name=Yasmeen)
+* Q(Trans,SID=1,Term=2015)
+  - CID1
+  - CID2
+  - CID3
+* Q(Teachers,Name=Z)
 
-Structured Query Language (SQL --> "Sequel")
+## Structured Query Language (SQL --> "Sequel")
 -Oracle
 -Sybase
 -IBM DB2
@@ -42,57 +42,53 @@ Structured Query Language (SQL --> "Sequel")
 
 
 
-SQLite
-.open asdfasd.db
-.databases
-.tables
-CREATE TABLE doughnuts (name TEXT, price REAL, qty INTEGER);
-INSERT INTO doughnuts VALUES ("jelly",2.50,10);
-.schema
-.schema doughnuts
-.dump
-drop table doughnuts
-select name,price from doughnuts;
-select * from doughnuts where name='chocolate';
-select * from doughnuts where name like 'c%';
-select * from doughnuts where qty < 10;
-select * from doughnuts where price >= 2 and price < 3;
-select * from doughnuts where qty < price;
-.read doughnuts.sql
-select rowid,name from doughnuts
-delete from doughnuts where name="caramel"
-update doughnuts set qty=10 where name="chocolate";
-update doughnuts set qty=qty-1 where name="chocolate";
-update doughnuts set qty=20;
-cat classes.sql
-select name from people, doughnuts; --> too ambiguous
-select people.name, doughnuts.name from people, doughnuts where doughnuts.name="glazed" and age<10;
-update...
-select * from people,classes where people.id=classes.id;
-select classes.name from people, classes where people.id=classes.id and grade <= 65;
-order by grade;
+## SQLite
+* .open asdfasd.db
+* .databases
+* .tables
+* CREATE TABLE doughnuts (name TEXT, price REAL, qty INTEGER);
+* INSERT INTO doughnuts VALUES ("jelly",2.50,10);
+* .schema
+* .schema doughnuts
+* .dump
+* drop table doughnuts
+* select name,price from doughnuts;
+* select * from doughnuts where name='chocolate';
+* select * from doughnuts where name like 'c%';
+* select * from doughnuts where qty < 10;
+* select * from doughnuts where price >= 2 and price < 3;
+* select * from doughnuts where qty < price;
+* .read doughnuts.sql
+* select rowid,name from doughnuts
+* delete from doughnuts where name="caramel"
+* update doughnuts set qty=10 where name="chocolate";
+* update doughnuts set qty=qty-1 where name="chocolate";
+* update doughnuts set qty=20;
+* cat classes.sql
+* select name from people, doughnuts; --> too ambiguous
+* select people.name, doughnuts.name from people, doughnuts where doughnuts.name="glazed" and age<10;
+* update...
+* select * from people,classes where people.id=classes.id;
+* select classes.name from people, classes where people.id=classes.id and grade <= 65;
+* order by grade;
 
-How SQL Databases are Usually Represented
--Index field (usually first one)
--Balanced search tree (O = log n)
+## How SQL Databases are Usually Represented
+* Index field (usually first one)
+* Balanced search tree (O = log n)
+* Splay trees
+** if you look for something now you're probs gonna want to find it again soon
+* Red Black Tree
+* 2-3 Tree
+** all data stored in leaves
+** info in branches about greater and less than
+* BTree
+** leaf-->511/512 children
 
-Splay trees (sp?)
--if you look for something now you're probs gonna want to find it again soon
+<hr>
 
-Red Black Tree
-
-2-3 Tree
--all data stored in leaves
--info in branches about greater and less than
-
-BTree
--leaf-->511/512 children
-
-
-***
-CREATE TABLE creates a new table.
-INSERT INTO adds a new row to a table.
-SELECT queries data from a table.
+* CREATE TABLE creates a new table.
+* INSERT INTO adds a new row to a table.
+* SELECT queries data from a table.
 UPDATE edits a row in a table.
 ALTER TABLE changes an existing table.
 DELETE FROM deletes rows from a table.
