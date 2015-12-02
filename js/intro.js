@@ -35,3 +35,17 @@ var removeItem = function removeItem(n){
     var items = document.getElementsByTagName("li");
     items[n].remove();
 };
+
+var ButtonCallback = function(e){
+    console.log(e)
+};
+
+var b = Document.getElementById('b');
+b.addEventListener('click',buttonCallback);
+
+var b2Callback = function(e){
+    e.preventDefault();
+    removeItem(0);
+};
+document.getElementById('b2').addEventListener('click',b2Callback);
+
