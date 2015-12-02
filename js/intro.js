@@ -1,4 +1,3 @@
-
 console.log("HELLO, JS loaded");
 
 var x = 20;
@@ -49,3 +48,24 @@ var b2Callback = function(e){
 };
 document.getElementById('b2').addEventListener('click',b2Callback);
 
+var thelist = document.getElementById("thelist");
+var items = thelist.children;
+
+var redCallback = function(e){
+    console.log(this);
+};
+
+var addMouseEvents = function(item){
+    item.addEventListener('mouseover',function(e){
+	    this.classList.remove('green');
+	    this.classList.add('blue');
+    });
+    item.addEventListener('mouseout',function(e){
+	    this.classList.remove('blue');
+	    this.classList.remove('green');
+    });
+};
+
+for (var i=0l i<items.length; i++){
+    addMouseEvents(items[i]);
+}
